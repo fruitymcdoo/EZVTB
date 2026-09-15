@@ -15,5 +15,5 @@ pub fn spawn_camera_and_lights(mut commands: Commands) {
         Transform::from_xyz(2.0, 4.0, 2.0).looking_at(Vec3::ZERO, Vec3::Y),
     ));
 
-    commands.insert_resource(AmbientLight { brightness: 300.0, ..default() });
+    commands.insert_resource(GlobalAmbientLight { brightness: 300.0, ..default() });
 }
