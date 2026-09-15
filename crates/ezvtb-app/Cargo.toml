@@ -1,0 +1,19 @@
+[package]
+name = "ezvtb-app"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "EZVTB desktop application: loads a rigged model and drives its bones from webcam face tracking"
+
+[[bin]]
+name = "ezvtb"
+path = "src/main.rs"
+
+[dependencies]
+bevy = "0.18.1"
+clap = { version = "4.6.7", features = ["derive", "env"] }
+ezvtb-rig = { path = "../ezvtb-rig" }
+ezvtb-tracking = { path = "../ezvtb-tracking" }
+ron = "0.12.2"
+serde = { version = "1.0.229", features = ["derive"] }
+tracing = "0.1.44"

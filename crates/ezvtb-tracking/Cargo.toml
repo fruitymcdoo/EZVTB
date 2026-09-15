@@ -1,0 +1,15 @@
+[package]
+name = "ezvtb-tracking"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Webcam capture and ONNX-based face landmark tracking, producing head pose and simple facial blend values"
+
+[dependencies]
+crossbeam-channel = "0.5.17"
+glam = { version = "0.30", features = ["serde"] }
+image = { version = "0.25.10", default-features = false, features = ["jpeg", "png"] }
+nokhwa = { version = "0.10.11", features = ["input-native", "serialize"] }
+ort = { version = "2.0.0-rc.13", default-features = false, features = ["load-dynamic", "std", "api-17"] }
+thiserror = "2.0.20"
+tracing = "0.1.44"

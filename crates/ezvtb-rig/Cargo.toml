@@ -1,0 +1,11 @@
+[package]
+name = "ezvtb-rig"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Skeleton/bone abstraction and automatic humanoid bone-mapping for arbitrary rigged 3D models"
+
+[dependencies]
+ron = "0.12.2"
+serde = { version = "1.0.229", features = ["derive"] }
+thiserror = "2.0.20"

@@ -1,0 +1,13 @@
+/target
+**/*.rs.bk
+*.pdb
+
+# Large binary assets users bring themselves (models, ONNX weights,
+# onnxruntime shared libs) shouldn't get committed to the repo.
+/assets/models/*
+!/assets/models/.gitkeep
+/assets/face_model/*
+!/assets/face_model/.gitkeep
+
+# Per-model bone-map overrides are user-specific local state.
+*.rig.ron
